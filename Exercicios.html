@@ -28,6 +28,22 @@
 
 <h2>Exercício 2</h2>
 <script>
+  var a = 2;
+  var b = 5;
+  
+  var aux = a
+  a=b
+  b=aux
+//se colocar b=a, a resposta será 5, pq eu declarei q a=b, e b=5
+ // cria se outra variavel para colocar o valor de a 
+document.write("a:" +a);
+document.write("<br>b:" +b)   
+
+</script>
+
+<h2>Exercício 3</h2> 
+<script>
+
 let inteiro = 7
 let decimal = 3.5
 
@@ -53,42 +69,111 @@ console.log(" O resultado do modulo1 é : " + modulo1);
 console.log(" O resultado do modulo2 é : " + modulo2);
 </script>
 
-<script>
-//Versão 2 Para aparecer o resultado no navegador.
-let inteirox = 7;
-let decimaly = 3.5;
-
-let adicao1 = inteirox + decimaly;
-let subtracao1 = inteirox - decimaly;
-let potenciacao1 = (adicao1 - .5) ** 2;
-let expressao1z = inteirox - 4 / 2 / 2;
-let expressao2z = (inteirox - 4) / 2;
-
-document.write(" O resultado da adição é : " + adicao1);
-document.write("<br> O resultado da subtração é : " + subtracao1);
-document.write("<br> O resultado da potenciação é : " + potenciacao1);
-document.write("<br> O resultado da expressão1 é : " + expressao1z);
-document.write("<br> O resultado da expressão2 é : " + expressao2z);
-
-</script>
-
-<h2>Exercício 3</h2> 
-<script>
-  var a = 2;
-  var b = 5;
-  
-  var aux = a
-  a=b
-  b=aux
-//se colocar b=a, a resposta será 5, pq eu declarei q a=b, e b=5
- // cria se outra variavel para colocar o valor de a 
-document.write("a:" +a);
-document.write("<br>b:" +b)   
-
-</script>
-
-
 <h2>Exercício 4</h2> 
+
+<script>
+//var idade = prompt("Digite sua idade: ");
+var idade = 18;
+  if (idade >= 18 && idade <70){
+    document.write(idade + " anos. É obrigatório votar");
+  }
+  else {
+    document.write("O voto é opcional");
+  }
+</script>
+
+<h2>Exercício 5</h2> 
+<script> 
+var raio = 3.5;
+var altura = 1.6;
+
+var area = 3.14 * (raio * raio);
+var volume = (area * altura).toFixed(2);//m3
+var volumeLitros = volume *1000;
+//não coloquei a const pi para abrir no navegador
+document.write(" A área é: "+ area);
+document.write(" <br>O volume em m3 é: "+ volume);
+document.write(" <br>O volume em litros é: "+ volumeLitros);
+
+</script>
+
+<h2>Exercício 6 A </h2>
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    var contador = 1; //se inicializar com 0, pde tirar o sinal de igual do <50
+    while (contador <= 50) {
+        if (contador % 2 !== 0) {//não coloque { e funcionou}
+            mostra(contador + " é impar");
+        } else {
+            mostra(contador + " é par");
+        }
+        contador++;
+    }
+    mostra("fim");
+
+</script>
+
+<h2>Exercício 6 B </h2>
+<script>
+
+    mostra("Múltiplos de 3")
+    var contador = 1;
+    var saida = "";
+    //essa string vazia vai aparecer no 
+    //laço while se o numero for multiplo de 3, usando
+    //o operador += (saida = saida +3)
+    while (contador <= 100) {
+        if (contador % 3 === 0) { saida += contador + " / "; }
+        contador++;
+    }
+    mostra(saida + " ");
+
+</script>
+
+<h2>Exercício 6 C </h2>
+<script>
+
+    mostra("Mostre a seguinte sequência (de 100 até 0, pulando de dois em dois")
+    var saida = "";
+    var contador = 100;
+    while (contador >= 0) {
+        saida += contador + " , ";
+        contador = contador - 2;
+    }
+    mostra(saida + " ");
+</script>
+
+<h2>Exercício 6 PIM </h2>
+
+<script>
+    var p = 1;
+    document.write('"');
+    while (p < 40) {
+        if (p % 4 == 0) {
+            document.write(" PIM ");
+        } else {
+            document.write(p + " ");
+        }
+        p++;
+    }
+    document.write(' PIM!"')
+</script>
+
+<h2>Exercício 7</h2> 
+
+
+
+
+
+<h2>Exercício 8</h2>
+
 <!-- Clientes de Jessica-->
 <script>
 function calculaClientes(bh, sp, ba, ms, pr){
@@ -99,8 +184,7 @@ var quantidadeClientes = calculaClientes(23,12,11,10,8);
 document.write("Nas capitais de BH, SP, BA, MS e PR, Jéssica possui " + quantidadeClientes + "  clientes.");
 </script>
 
-
-<h2>Exercício 5</h2> 
+******
 <script>
  function calculaFaturamentoMedio(faturamento, cliente){
     var fm = faturamento/cliente;
@@ -120,8 +204,9 @@ document.write("<br>Campo Grande: R$ "+fatCampoGrande);
 document.write("<br>Curitiba: R$ "+fatCuritiba);
 </script>
 
+********
+<h2>Exercício 9</h2>
 
-<h2>Exercício 6</h2>
 <script>
 
 var base = 20;
@@ -138,37 +223,7 @@ document.write("<br>A área do triângulo retângulo é: "+areaTrianguloRetangul
 //no exercicio pede console.log, mas para aparecer no navegador, coloquei document.write.
 </script>
 
-<h2>Exercício 7</h2> 
-<script> 
-var raio = 3.5;
-var altura = 1.6;
-
-var area = 3.14 * (raio * raio);
-var volume = (area * altura).toFixed(2);//m3
-var volumeLitros = volume *1000;
-//não coloquei a const pi para abrir no navegador
-document.write(" A área é: "+ area);
-document.write(" <br>O volume em m3 é: "+ volume);
-document.write(" <br>O volume em litros é: "+ volumeLitros);
-
-</script>
-
-<h2>Exercício 8</h2>
-<script>
-
-  //var idade = prompt("Digite sua idade: ");
-var idade = 18;
-  if (idade >= 18 && idade <70){
-    document.write(idade + " anos. É obrigatório votar");
-  }
-  else {
-    document.write("O voto é opcional");
-
-  }
-
-</script>
-
-<h2>Exercício 9</h2>
+<h2>Exercício 10</h2>
 
 <script>
  
@@ -187,8 +242,6 @@ var idade = 18;
   document.write("<br>O valor da diaria será: R$ "+ (dolarnzEMreal*diaria).toFixed(2));
   document.write("<br>O valor do guia será: R$ "+ (dolarnzEMreal*guia).toFixed(2));
 
-  ///////////////
-
   document.write("<br><br><b> Viagem para Tailândia <br></b>");
   var real = 0.15
   var bahtTailandes = 1.00
@@ -203,8 +256,6 @@ var idade = 18;
   document.write("O valor da passagem será: NZ "+ (realEMthb*passagem).toFixed(2));
   document.write("<br>O valor da diaria será: R$ "+ (thbEMreal*diaria).toFixed(2));
   document.write("<br>O valor do guia será: R$ "+ (thbEMreal*guia).toFixed(2));
-
-  //////////////
 
   document.write("<br><br><b> Viagem para Costa Rica <br></b>");
   var real = 0.0089
@@ -223,15 +274,12 @@ var idade = 18;
 
 </script>
 
-<h2>Exercício 10</h2>
-
-
+<h2>Exercício 11</h2>
 <script>
 document.write("<b> Viagem para Nova Zelandia <br></b>");
   
   var nome = prompt("Digite seu nome");
   var destino = prompt("Digite seu destino");
-
   var passagem = parseInt(prompt("Digite o valor da passagem"));
   var diaria = parseInt(prompt("Digite o valor da diária do hotel"));
   var dia = parseInt(prompt("Digite quantos dias de viagem"));
@@ -239,12 +287,9 @@ document.write("<b> Viagem para Nova Zelandia <br></b>");
   var totalDia = dia*diaria;
   var total = passagem + totalDia + guia;
 
-
   function enviaEmail(nome, destino, passagem, diaria, guialocal, dia, total){
 
-    var email = enviaEmail(nome, destino, passagem, diaria, guialocal, dia, total);
+  var email = enviaEmail(nome, destino, passagem, diaria, guialocal, dia, total);
   }
    document.write("Olá " + nome + "! É um prazer termos você como cliente e estamos ansiosos para que sua viagem para "+ destino + " possa ocorrer em breve! Estou te encaminhando os custos: As passagens ficarão em torno de R$ "+passagem+", os custos para acomodação de "+dia+ " dias serão de R$ "+totalDia+ ". O guia local custará R$ "+ guialocal + ". Sua viagem custará R$ "+total + " .");
-
-  
 </script>
