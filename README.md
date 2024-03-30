@@ -72,3 +72,11 @@ let decimal = 3.5
 - 
 2. O jogo do PIM é um jogo em que o Sílvio Santos pedia para os participantes de seu programa contar de 1 até 40 da seguinte forma:
 Ou seja, quando o número era múltiplo de 4, o jogador tinha que falar PIM ao invés do número! Crie uma lógica que executa o jogo do PIM corretamente.
+
+#### 7.
+Para realizar o que é pedido, crie um arquivo HTML chamado clientes_jessica.html e considere as informações abaixo para resolver o que se pede.
+- Jéssica precisa de um programa para calcular e completar informações da sua empresa de forma automática. A tabela abaixo mostra alguns dados das 5 primeiras cidades onde ela mais possui clientes ativos:
+
+- 1. Some as quantidade desses clientes de Jéssica e concatene esse valor numa string semelhante a:
+"Nas capitais de BH, SP, BA, MS e PR, Jéssica possui N clientes."
+
