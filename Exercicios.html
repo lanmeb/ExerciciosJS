@@ -5,24 +5,21 @@
 <h1>Lista 1 - Elania</h1>
 <h2>Exercício 1</h2>
 <script>
-    var nome = "Ana";
-    var telefone = "(011) 98585-4545";
-    var profissao = "vendedora";
-    var salario = 1500;
-        
-    var profissional = ("Dados do funcionário: <br> Nome: " + nome + " <br> Telefone: " + telefone +
-    " <br> Cargo: " + profissao + " <br> Salário: R$ " + salario + " reais. <br> Possui convênio? " + convenio );
-    
-    document.write(profissional);
-    
-    var convenio = false;
-        if (convenio){
-          document.write("Sim"); 
-        }
-          
-          else {
-            document.write("Não possui.");
-          }
+var nome = "Ana";
+var telefone = "(011) 98585-4545";
+var profissao = "vendedora";
+var salario = 1500;
+var convenio = false;
+var profissional = ("Dados do funcionário: <br> Nome: " + nome + " <br> Telefone: " + telefone +
+    " <br> Cargo: " + profissao + " <br> Salário: R$ " + salario + " reais. <br> Possui convênio? ");
+   
+document.write(profissional);
+    if (convenio){
+      document.write("Sim"); 
+    }
+    else {
+      document.write("Não possui.");
+    }
      
 </script>
 
@@ -167,13 +164,53 @@ document.write(" <br>O volume em litros é: "+ volumeLitros);
 </script>
 
 <h2>Exercício 7</h2> 
+<script>
 
+var base = 20;
+var altura = 30;
+var raio = 15;
 
+var areaRetangulo = base * altura;
+var areaCirculo = 3.14 * (raio*raio);
+var areaTrianguloRetangulo = (base * altura)/2;
 
+document.write("A área do retângulo é: "+ areaRetangulo);
+document.write("<br>A área do círculo é: "+ areaCirculo);
+document.write("<br>A área do triângulo retângulo é: "+areaTrianguloRetangulo);
+//no exercicio pede console.log, mas para aparecer no navegador, coloquei document.write.
+</script>
 
+<h2>Exercício 8 A</h2>
+<script>
+    var pessoa = ["Ana", 25, "CPF: 12345678910", 1.65, true];
+    document.write("O array tem " + pessoa.length + " elementos<br>");
+    document.write(" O primeiro elemento é " + pessoa[0]);
+    document.write("<br> O último elemento é " + '"' + pessoa[pessoa.length - 1] + '"');
+    document.write("<br> Os elementos da lista são: " + pessoa);
+</script>
 
-<h2>Exercício 8</h2>
+<h2>Exercício 8 B</h2>
+<script>
+ var letras = [];
+  function recebeLetras(){
+   var letra = prompt('Digite uma letra: \n');
+   letras.push(letra);
+  }
+  for (var i =1; i<=5; i++){
+   recebeLetras();
+  }
 
+  document.write('\n<br>'+letras);
+  document.write('\n<br> Primeira letra digitada:\n' + letras[0]);
+  document.write('\n<br> Quarta letra digitada:\n' + letras[3]);
+  document.write('\n<br> Quinta letra digitada:\n' + letras[4]);
+  document.write('\n<br> Quantidade de letras: \n' + letras.length);
+  document.write('\n <br>O tamanho da lista: '+ [letras.length-1]);
+  document.write('\n<br> Última letra digitada:\n' + letras[letras.length-1]);
+
+ </script>
+
+<h2>Exercício 9 </h2>
 <!-- Clientes de Jessica-->
 <script>
 function calculaClientes(bh, sp, ba, ms, pr){
@@ -194,8 +231,7 @@ var fatBeloHorizonte = Math.round(calculaFaturamentoMedio(2950, 23));
 var fatSaoPaulo = Math.round(calculaFaturamentoMedio(3950, 12));
 var fatSalvador = Math.round(calculaFaturamentoMedio(1329, 11));
 var fatCampoGrande = Math.round(calculaFaturamentoMedio(2412, 10));
-var fatCuritiba = (calculaFaturamentoMedio (626, 8).toFixed(2));
-                                //outro jeito de arredondar
+
 document.write("O faturamento médio por cliente:");
 document.write("<br>Belo Horizonte: R$ " +fatBeloHorizonte); 
 document.write("<br>São Paulo: R$ " +fatSaoPaulo);
@@ -204,8 +240,52 @@ document.write("<br>Campo Grande: R$ "+fatCampoGrande);
 document.write("<br>Curitiba: R$ "+fatCuritiba);
 </script>
 
+<script>
+var totalClientes = 23 + 12 + 11 + 10 + 8;
+var totalFaturamento = 2950 + 3950 + 1329 + 2412 + 626;
+var mediaFaturamentoPorCliente = totalFaturamento / totalClientes;
+var resultadoString = "<br>A média de faturamento por cliente nas cinco cidades é de R$ " + mediaFaturamentoPorCliente.toFixed(2);
+
+document.write(resultadoString);
+</script>
+<script>
+// Dados sobre os custos de frete e produção
+const freteSP = 9.00; // Frete fixo para o estado de São Paulo
+const freteOutrosEstados = 14.00; // Frete para os demais estados do Brasil
+const custoProducaoPercentual = 0.20; // Custo de produção como percentual do valor faturado
+
+// Dados de faturamento por cidade (já calculados anteriormente)
+const faturamentoBeloHorizonte = 2950;
+const faturamentoSaoPaulo = 3950;
+const faturamentoSalvador = 1329;
+const faturamentoCampoGrande = 2412;
+const faturamentoCuritiba = 626;
+
+// Função para calcular o lucro
+function calcularLucro(faturamento, frete) {
+  const custoProducao = faturamento * custoProducaoPercentual;
+  const lucro = faturamento - custoProducao - frete;
+  return lucro;
+}
+
+// Cálculo do lucro para cada cidade
+const lucroBeloHorizonte = calcularLucro(faturamentoBeloHorizonte, freteOutrosEstados);
+const lucroSaoPaulo = calcularLucro(faturamentoSaoPaulo, freteSP);
+const lucroSalvador = calcularLucro(faturamentoSalvador, freteOutrosEstados);
+const lucroCampoGrande = calcularLucro(faturamentoCampoGrande, freteOutrosEstados);
+const lucroCuritiba = calcularLucro(faturamentoCuritiba, freteOutrosEstados);
+
+// Exibição dos resultados
+document.write( "<br>Lucro por cidade:");
+document.write(`<br>Belo Horizonte: R$ ${lucroBeloHorizonte.toFixed(2)}`);
+document.write(`<br>São Paulo: R$ ${lucroSaoPaulo.toFixed(2)}`);
+document.write(`<br>Salvador: R$ ${lucroSalvador.toFixed(2)}`);
+document.write(`<br>Campo Grande: R$ ${lucroCampoGrande.toFixed(2)}`);
+document.write(`<br>Curitiba: R$ ${lucroCuritiba.toFixed(2)}`);
+
+</script>
 ********
-<h2>Exercício 9</h2>
+<h2>Exercício 10 </h2>
 
 <script>
 
@@ -223,7 +303,7 @@ document.write("<br>A área do triângulo retângulo é: "+areaTrianguloRetangul
 //no exercicio pede console.log, mas para aparecer no navegador, coloquei document.write.
 </script>
 
-<h2>Exercício 10</h2>
+<h2>Exercício 11</h2>
 
 <script>
  
@@ -274,7 +354,7 @@ document.write("<br>A área do triângulo retângulo é: "+areaTrianguloRetangul
 
 </script>
 
-<h2>Exercício 11</h2>
+<h2>Exercício 12</h2>
 <script>
 document.write("<b> Viagem para Nova Zelandia <br></b>");
   
