@@ -47,7 +47,7 @@ document.write("b:" +b)
 
 #### 3. Operações Aritméticas
 Realize as operações aritméticas abaixo e exiba os resultados na tela através do console.log():
-■ Resolva as operações mentalmente, primeiro, para que possa consolidar melhor os conceitos de variáveis e ordem de precedência.
+- ■ Resolva as operações mentalmente, primeiro, para que possa consolidar melhor os conceitos de variáveis e ordem de precedência.
 let inteiro = 7
 let decimal = 3.5
 
@@ -65,7 +65,8 @@ let decimal = 3.5
 No Brasil, uma pessoa é obrigada a votar se tiver idade entre 18 e 70 anos. Acima de 70 anos o voto é opcional, assim como para quem tem 16 ou 17 anos. Quem ainda não completou 16 anos não pode votar. Através de estruturas condicionais, crie um programa que dirá se uma pessoa pode ou não votar, de acordo com a idade que será armazenada em uma variável.
 
 #### 5. Bug no SW - piscina
-Uma piscina redonda está sendo construída, e sabe-se que ela tem o raio de 3,5m, e uma altura de 1,6m. O construtor notou um erro no volume de água em litros que o software da empresa está retornando, em torno de 0,06L, e resolveu entrar em contato com a equipe de TI. Construa uma lógica que calcula a quantidade de litros que a piscina suportará e identifique o problema na lógica do software.
+Uma piscina redonda está sendo construída, e sabe-se que ela tem o raio de 3,5m, e uma altura de 1,6m. O construtor notou um erro no volume de água em litros que o software da empresa está retornando, em torno de 0,06L, e resolveu entrar em contato com a equipe de TI. 
+Construa uma lógica que calcula a quantidade de litros que a piscina suportará e identifique o problema na lógica do software.
 
 #### 6. Estrutura de repetição
 Com as estruturas de repetição for e while, faça o que se pede:
@@ -77,18 +78,18 @@ Com as estruturas de repetição for e while, faça o que se pede:
 Ou seja, quando o número era múltiplo de 4, o jogador tinha que falar PIM ao invés do número! Crie uma lógica que executa o jogo do PIM corretamente.
 
 #### 7. Fórmulas Matemáticas
-A. Crie uma variável para cada figura geométrica(retângulo, círculo, triângulo retângulo), que armazene a fórmula que calcula a sua área.
-B. Com as fórmulas armazenadas nessas variáveis, atribua valores em variáveis para as bases, alturas e raio das figuras e calcule
-a) a área do retângulo
-b) a área do círculo
-c) a área do triângulo retângulo
-Em seguida exiba os resultados do cálculos das áreas, imprimindo as variáveis através do console.log().
+- A. Crie uma variável para cada figura geométrica(retângulo, círculo, triângulo retângulo), que armazene a fórmula que calcula a sua área.
+- B. Com as fórmulas armazenadas nessas variáveis, atribua valores em variáveis para as bases, alturas e raio das figuras e calcule
+- a) a área do retângulo
+- b) a área do círculo
+- c) a área do triângulo retângulo
+-Em seguida exiba os resultados do cálculos das áreas, imprimindo as variáveis através do console.log().
 
 #### 8. Listas
-A. Crie uma lista chamada pessoa, coloque valores dentro dela como: nome (string), idade (inteiro), CPF (string), altura (decimal), se é maior de idade ou não (valor booleano true ou false).
-B. Crie um programa que recebe uma quantidade máxima de 5 letras e ao final exibe todas elas no console.
-Crie uma função chamada recebeLetra para pegar a letra e colocar na lista de letras.
-Considerando o exercício anterior, refaça ele criando uma lista que irá armazenar as letras e em seguida mostre no console:
+- A. Crie uma lista chamada pessoa, coloque valores dentro dela como: nome (string), idade (inteiro), CPF (string), altura (decimal), se é maior de idade ou não (valor booleano true ou false).
+- B. Crie um programa que recebe uma quantidade máxima de 5 letras e ao final exibe todas elas no console.
+- Crie uma função chamada recebeLetra para pegar a letra e colocar na lista de letras.
+- Considerando o exercício anterior, refaça ele criando uma lista que irá armazenar as letras e em seguida mostre no console:
 - a) A primeira letra digitada
 - b) A quarta letra digitada
 - c) A quinta letra digitada
@@ -190,7 +191,28 @@ document.write(`<br>Salvador: R$ ${lucroSalvador.toFixed(2)}`);
 document.write(`<br>Campo Grande: R$ ${lucroCampoGrande.toFixed(2)}`);
 document.write(`<br>Curitiba: R$ ${lucroCuritiba.toFixed(2)}`);
 ````
+#### 10. Agência de viagens
+Uma agência de viagens precisa de um programa que converta moedas estrangeiras para o real brasileiro. Uma agente de viagens está fazendo as seguintes pesquisas para um casal que está se planejando para viajar:
+1. Crie o programa para a agência que irá converter os valores, de real para dólar neozelandês, baht tailandês e colón costarriquenho, e vice-versa. Apresente os valores convertidos no console, utilizando console.log().
+
+🌏 Destino: Nova Zelândia Passagens aéreas: R$ 13996 Diária hotel: NZD $ 79,15 Guia local: NZD $ 200
+
+→ Pesquise a cotação atual do dólar neozelandês ou use: R$ 1,00 = NZD $ 3,25
+
+🌏 Destino: Tailândia Passagens aéreas: R$ 9160 Diária hotel: THB 590 Guia local: THB 235
+
+→ Pesquise a cotação atual do baht tailandês ou use: R$ 0,15 = THB 1,00
+
+🌎 Destino: Costa Rica Passagens aéreas: R$ 5119 Diária hotel: CRC 2300 Guia local: CRC 3150
+
+→ Pesquise a cotação atual do colón costarriquenho ou use: R$ 0,0089 = CRC 1,00
 
 
+#### 11. O programa que você está desenvolvendo para essa agência, também fará o envio automático de e-mails para os clientes, de acordo com que os agentes de viagens informarem ao software. Para testes, você espera receber alguns dados (que podem ser passados como parâmetros):
 
-
+- a) Nome do cliente
+- b) Destino
+- c) Valor das passagens
+- d) Diária do hotel
+- e) Valor do guia local
+- f) Custo fixo dessa viagem para X dias
