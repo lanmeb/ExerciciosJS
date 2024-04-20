@@ -1,0 +1,66 @@
+### desafio sistema bancário
+<!DOCTYPE html>
+    <html>
+    <head>
+    <title>Exemplo de JavaScript</title>
+    </head>
+    <body>
+    <script>
+        // Variáveis para armazenar o número de tentativas e a chave de segurança correta
+        let tentativas = 0;
+        let chaveCorreta = "9999";
+
+        // Função para verificar se o cartão está bloqueado
+        function cartaoBloqueado() {
+        return tentativas >= 3;
+        }
+
+        // Função para exibir a mensagem de senha incorreta e bloqueio do cartão
+        function exibirMensagemBloqueio() {
+        alert("Senha incorreta. Seu cartão foi bloqueado.");
+        let opcao = prompt("Se deseja ir a uma agência, digite 'A'. Se deseja desbloquear com sua chave de segurança, digite 'D'.");
+        if (opcao === 'A' || opcao === 'a') {
+            alert("Será um prazer atendê-la em uma agência.");
+        } else if (opcao === 'D' || opcao === 'd') {
+            solicitarChaveSeguranca();
+        } else {
+            alert("Opção inválida. Tente novamente.");
+        }
+        }
+
+        // Função para solicitar a chave de segurança
+        function solicitarChaveSeguranca() {
+        let chaveDigitada = prompt("Digite a chave de segurança que foi enviada para seu e-mail cadastrado.");
+        verificarChaveSeguranca(chaveDigitada)
+        }
+
+        // Função para verificar a chave de segurança digitada
+    
+        function verificarChaveSeguranca(chaveDigitada) {
+        if (chaveDigitada === chaveCorreta) {
+            alert("Chave correta! Por favor, redefina sua senha.");
+            } else {
+            alert("Chave incorreta. Você deve ir a uma agência para desbloquear seu cartão.");
+            }
+
+        }   
+        // Simulando o fluxo de interação com o usuário
+
+        // Usuário tenta a senha pela primeira vez
+        alert("Cliente usando cartão de crédito");
+        alert("Tentativa 1: Senha incorreta.");
+        tentativas++;
+
+        // Usuário tenta a senha pela segunda vez
+        alert("Tentativa 2: Senha incorreta.");
+        tentativas++;
+
+        // Usuário tenta a senha pela terceira vez e o cartão é bloqueado
+        alert("Tentativa 3: Senha incorreta.");
+        tentativas++;
+        exibirMensagemBloqueio();
+    </script>
+
+    </body>
+
+    </html>
